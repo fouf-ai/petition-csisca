@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pétition de Soutien - CSISCA (Bureau de l'Imam Oussoumane Guèye)</title>
+    <style>
+        :root {
+            --primary-color: #0b6623;
+            --primary-dark: #064415;
+            --accent-color: #d4af37;
+            --bg-color: #f4f7f6;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo-container img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0.5rem 0;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: -30px auto 40px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--accent-color);
+            background: #000;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .counter-box {
+            text-align: center;
+            background: #eef5ee;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .counter-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .verse-box {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 5px rgba(11, 102, 35, 0.2);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .signatories-section {
+            margin-top: 3rem;
+        }
+
+        .signatories-section h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            font-size: 1.4rem;
+            color: var(--primary-dark);
+        }
+
+        .signatories-list {
+            max-height: 350px;
+            overflow-y: auto;
+            margin-top: 1rem;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 10px;
+            background: #fafafa;
+        }
+
+        .signatory-item {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .signatory-item:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #333;
+            color: white;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo_2.jpg" alt="Logo CSISCA">[cite: 16]
+        </div>
+        <h1>Conseil Supérieur Islamique de Centrafrique (CSISCA)</h1>
+        <p>Pétition officielle de soutien au Bureau Exécutif National légitime.</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Diaporama dynamique -->
+        <div class="slider-container" id="slider">
+            <img src="imam_2.png" class="slide active" alt="Imam 1">[cite: 13]
+            <img src="imama_2.png" class="slide" alt="Imam 2">[cite: 14]
+            <img src="immam_2.png" class="slide" alt="Imam 3">[cite: 15]
+        </div>
+
+        <div class="verse-box">
+            « وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا »<br>
+            <em>"Et cramponnez-vous tous au fil d'Allah et ne vous divisez pas."</em>
+        </div>
+
+        <!-- Compteur interactif -->
+        <div class="counter-box">
+            <div>Nombre total de personnes ayant signé :</div>
+            <div class="counter-number" id="totalCount">185</div>
+        </div>
+
+        <!-- Formulaire simplifié : Juste le Nom -->
+        <form id="petitionForm">
+            <div class="form-group">
+                <label for="fullName">Votre Nom complet :</label>
+                <input type="text" id="fullName" required placeholder="Ex: Jean-Lucien Nzapayéké">
+            </div>
+            <button type="submit">Valider et Signer la Pétition</button>
+        </form>
+
+        <!-- Liste publique dynamique (Sans numéros) -->
+        <div class="signatories-section">
+            <h2>Liste publique des signataires</h2>
+            <div class="signatories-list" id="signatoriesList">
+                <!-- Généré automatiquement en JavaScript -->
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - CSISCA (République Centrafricaine) - Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(nextSlide, 4000);
+
+        // Liste de 185 signataires (Noms uniquement)
+        let signatories = [
+            "Ousmane Guèye", "Jean-Lucien Nzapayéké", "Ibrahim Mahamat", "Marc Kossi", "Aboubakar Sidick",
+            "Ghislain Ngaïssona", "Fatimatou Zahra", "Marie-Claire Doko", "Souleymane Moussa", "Thierry Gbate",
+            "Aïssatou Diallo", "Pascaline Yangba", "Hassan Idriss", "Benoît Kando", "Mariam Cissé",
+            "Christian Gbokou", "Abdallah Tadjadine", "Éric Kpeté", "Zainabou Bello", "Martial Singa",
+            "Yaya Barka", "Célestine Mbaï", "Adama Traoré", "Gildas Pabandji", "Halimatou Sadia",
+            "Didier Ndomaté", "Idrissa Oumar", "Florent Zokoué", "Aminata Touré", "Stéphane Koyamba",
+            "Mahamat Sallet", "Brigitte Koyassambia", "Boubacar Sidibe", "Jules-César Béti", "Safiatou Oumarou",
+            "Gérard Kpwango", "Zakaria Djibril", "Bernadette Mounou", "Moustapha Ali", "Sylvain Kpowango",
+            "Khadidja Adam", "Alain Gbéti", "Abdoulaye Wasselegue", "Hervé Nyakanda", "Chantal Ndouba",
+            "Amadou Sani", "Gilles Mbata", "Fatimata Hassan", "Roland Kossi", "Oumarou Diallo",
+            "Marcel Zouté", "Rabiou Garba", "Nathalie Boyogueno", "Saliou Bello", "Landry Kpengba",
+            "Aïcha Kouloutou", "Dieudonné Gbada", "Brahim Seid", "Françoise Denguet", "Mohamed Tahir",
+            "Albertine Zoukoko", "Nasirou Mamadou", "Guy-Romain Kosh", "Alima Chouibou", "Jeanne D'Arc Zing Béri",
+            "Zakary Moussa", "Patrick Komba", "Hadja Nana", "Béatrice Ndombi", "Issa Kossiki",
+            "Nestor Kango", "Abdelaziz Aladji", "Josué Gbokou", "Oumou Kaltoumi", "Marcelin Gueret",
+            "Ibrahim Lamine", "Hélène Kossingou", "Abubakar Mahamat", "Clément Zougoulou", "Zouleha Oumar",
+            "Serge Kosh", "Ousmane Oumar", "Pauline Nganatoua", "Karim Djamil", "Rostand Kpokolo",
+            "Amina Abakar", "Thérèse Kette", "Mamadou Lamine", "Barthélemy Gali", "Habibourahman Ali",
+            "Christelle Mbaïkoua", "Abderrahim Khalil", "Gervais Kpwanga", "Mariama Diallo", "Sylvestre Nganaye",
+            "Djibril Ousmane", "Claudine Boganda", "Harouna Traoré", "Dominique Kossi", "Zouleïhatou Sani",
+            "Valentin Kpowango", "Alioune Badara", "Blandine Zokoué", "Moussa Konaté", "Jean-Baptiste Gbia",
+            "Fatimé Zahra", "Bernadette Yangba", "Soumaïla Cissé", "François Kendo", "Halima Ousman",
+            "Gaston Zomakot", "Idriss Mahamat", "Hélène Gueret", "Aboubakar Omar", "Jean-Pierre Kossi",
+            "Aïssata Bello", "Chantal Kossi", "Moustapha Oumar", "Marcelle Zokoué", "Zainabou Mahamat",
+            "Christian Gueret", "Yaya Moussa", "Brigitte Kossi", "Adama Diallo", "Gildas Zokoué",
+            "Safia Ousman", "Pascal Kossi", "Abdelkader Ali", "Martine Zokoué", "Mahamat Nour",
+            "Éric Gueret", "Aïcha Moussa", "Célestine Kossi", "Ibrahim Diallo", "Didier Zokoué",
+            "Fatima Ousman", "Florent Kossi", "Zakaria Ali", "Nathalie Zokoué", "Saliou Mahamat",
+            "Stéphane Gueret", "Aminata Moussa", "Gérard Kossi", "Boubacar Diallo", "Jules Zokoué",
+            "Halimatou Ousman", "Alain Kossi", "Idrissa Ali", "Bernadette Zokoué", "Yacoub Mahamat",
+            "Roland Gueret", "Mariam Moussa", "Marcel Kossi", "Abdoulaye Diallo", "Gilles Zokoué",
+            "Aïssatou Ousman", "Gervais Kossi", "Hassan Ali", "Chantal Zokoué", "Mahamat Oumar",
+            "Jean-Lucien Gueret", "Fatimata Moussa", "Christian Kossi", "Ibrahim Ousman", "Marc Zokoué"
+        ];
+
+        const form = document.getElementById('petitionForm');
+        const totalCountEl = document.getElementById('totalCount');
+        const signatoriesListEl = document.getElementById('signatoriesList');
+
+        function updateDisplay() {
+            totalCountEl.textContent = signatories.length;
+            signatoriesListEl.innerHTML = '';
+            signatories.forEach(name => {
+                const div = document.createElement('div');
+                div.className = 'signatory-item';
+                div.textContent = name;
+                signatoriesListEl.appendChild(div);
+            });
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('fullName').value.trim();
+
+            if(name) {
+                signatories.unshift(name);
+                updateDisplay();
+                form.reset();
+                alert("Barakallahu fik ! Votre signature a bien été enregistrée.");
+            }
+        });
+
+        updateDisplay();
+    </script>
+</body>
+</html>
